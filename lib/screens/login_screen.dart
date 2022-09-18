@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors_in_immutables
+
 import 'package:flutter/material.dart';
 
 class LogInScreen extends StatefulWidget {
@@ -80,7 +82,6 @@ class _LogInScreenState extends State<LogInScreen> {
               ),
             ),
             Stack(
-              // mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
                   transform: Matrix4.translationValues(-120.0, 60.0, 0.0),
