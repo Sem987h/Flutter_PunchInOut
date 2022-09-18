@@ -1,16 +1,15 @@
 // ignore_for_file: prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
-import 'package:softedge_in_out/screens/otp_screen.dart';
 
-class LogInScreen extends StatefulWidget {
-  LogInScreen({Key? key}) : super(key: key);
+class OtpScreen extends StatefulWidget {
+  OtpScreen({Key? key}) : super(key: key);
 
   @override
-  State<LogInScreen> createState() => _LogInScreenState();
+  State<OtpScreen> createState() => _OtpScreenState();
 }
 
-class _LogInScreenState extends State<LogInScreen> {
+class _OtpScreenState extends State<OtpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,17 +40,25 @@ class _LogInScreenState extends State<LogInScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
                   Text(
-                    "Mobile Number\nVarification",
+                    "OTP",
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "Please Enter the 4-Digit Pin we sent to",
+                    style: TextStyle(fontSize: 15),
+                  ),
+                  SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Please Enter You Mobile Number Below",
+                    "+91 1234567890",
+                    style: TextStyle(fontSize: 15),
                   ),
                   SizedBox(
                     height: 30,
@@ -70,12 +77,11 @@ class _LogInScreenState extends State<LogInScreen> {
                           width: 2,
                         ),
                       ),
-                      prefix: Text("+91 "),
                       prefixIcon: Icon(
                         Icons.phone_android,
                         color: Color.fromARGB(255, 120, 47, 215),
                       ),
-                      labelText: 'Enter Phone Number',
+                      labelText: 'Enter OTP',
                       labelStyle: TextStyle(color: Colors.black),
                     ),
                   ),
@@ -94,14 +100,7 @@ class _LogInScreenState extends State<LogInScreen> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => OtpScreen(),
-                      ),
-                    );
-                  },
+                  onTap: () {},
                   child: Container(
                     height: MediaQuery.of(context).size.height / 13,
                     width: MediaQuery.of(context).size.height / 4,
@@ -126,7 +125,7 @@ class _LogInScreenState extends State<LogInScreen> {
                     ),
                     child: const Center(
                       child: Text(
-                        "Send Otp",
+                        "Verify",
                         style: TextStyle(
                             color: Color.fromARGB(255, 0, 136, 103),
                             fontSize: 25),
